@@ -48,6 +48,7 @@ sudo apt-get install -y tree xdotool wmctrl zenity bc
 
 # 1. build ros2 packages
 cd <YOUR_ROS2_WORKSPACE>/src
+git clone https://github.com/Hokuyo-aut/hokuyo_rsf.git
 git clone --recursive https://github.com/Hokuyo-aut/hokuyo_navigation2.git
 cd <YOUR_ROS2_WORKSPACE>
 rosdep update
