@@ -1,7 +1,7 @@
 [submodule "hokuyo_navigation2"]
 	path = hokuyo_navigation2
 	url = https://github.com/hokuyo-rd-release/hokuyo_navigation2.git
-	branch = ATC_2025
+	branch = release
 [submodule "hokuyo_navigation2_gui"]
 	path = hokuyo_navigation2_gui
 	url = https://github.com/hokuyo-rd-release/hokuyo_navigation2_gui.git
@@ -33,7 +33,7 @@
 	path = rosbridge_suite
 	url = https://github.com/hokuyo-rd-release/rosbridge_suite.git
 	branch = humble
-[submodule "nmea_msgs.git"]
-	path = nmea_msgs.git
+[submodule "nmea_msgs"]
+	path = nmea_msgs
 	url = https://github.com/hokuyo-rd-release/nmea_msgs.git
 	branch = ros2

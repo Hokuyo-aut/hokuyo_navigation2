@@ -27,21 +27,21 @@ Pillow==9.0.1
 Pillow==12.0.0
 pymongo==4.15.5
 pyproj==3.7.1
-PyQt5==5.15.11
-PyQt5_sip==12.9.1
+PyQt5
+PyQt5_sip
 pyridescence==0.1.9
 pytest==6.2.5
-rcl_interfaces==1.2.2
-rclpy==3.3.19
+#rcl_interfaces==1.2.2
+#rclpy==3.3.19
 recommonmark==0.7.1
-ros2action==0.18.15
-ros2interface==0.18.15
-ros2lifecycle==0.18.15
-ros2node==0.18.15
-ros2param==0.18.15
-ros2pkg==0.18.15
-ros2service==0.18.15
-ros2topic==0.18.15
+#ros2action==0.18.15
+#ros2interface==0.18.15
+#ros2lifecycle==0.18.15
+#ros2node==0.18.15
+#ros2param==0.18.15
+#ros2pkg==0.18.15
+#ros2service==0.18.15
+#ros2topic==0.18.15
 rosbag2_py==0.15.15
 rosidl_adapter==3.1.7
 rosidl_runtime_py==0.9.3
@@ -49,16 +49,16 @@ scipy==1.8.0
 sensor_msgs==4.9.0
 sensor_msgs_py==4.9.0
 setuptools==68.0.0
-setuptools==80.9.0
-setuptools==59.6.0
+# setuptools==80.9.0
+# setuptools==59.6.0
 simplejson==3.17.6
 six==1.16.0
 std_msgs==4.9.0
 std_srvs==4.9.0
-tf2_ros_py==0.25.17
-tf_transformations==1.1.0
+#tf2_ros_py==0.25.17
+#ros-humble-tf_transformations
 tornado==6.5.4
-tornado==6.1
+# tornado==6.1
 transforms3d==0.4.2
 Twisted==22.1.0
 tqdm
