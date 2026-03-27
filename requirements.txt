@@ -9,9 +9,6 @@ Flask
 Flask_Sockets
 gevent
 gevent_websocket
-launch_ros
-launch_testing
-lifecycle_msgs
 matplotlib
 numpy==1.22.4
 open3d
