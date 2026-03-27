@@ -21,9 +21,6 @@ PyQt5_sip
 pyridescence
 pytest
 recommonmark
-rosbag2_py
-rosidl_adapter
-rosidl_runtime_py
 scipy
 sensor_msgs_py
 setuptools==68.0.0
