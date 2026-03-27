@@ -7,16 +7,12 @@ autobahn_rce
 cbor2
 Flask
 Flask_Sockets
-geometry_msgs
 gevent
 gevent_websocket
 launch_ros
 launch_testing
 lifecycle_msgs
 matplotlib
-nav2_common
-nav2_msgs
-nav_msgs
 numpy==1.22.4
 open3d
 pathos
@@ -28,24 +24,20 @@ PyQt5_sip
 pyridescence
 pytest
 recommonmark
-rosbag2_py==0.15.15
-rosidl_adapter==3.1.7
-rosidl_runtime_py==0.9.3
-scipy==1.8.0
-sensor_msgs==4.9.0
-sensor_msgs_py==4.9.0
+rosbag2_py
+rosidl_adapter
+rosidl_runtime_py
+scipy
+sensor_msgs_py
 setuptools==68.0.0
 # setuptools==80.9.0
 # setuptools==59.6.0
 simplejson==3.17.6
 six==1.16.0
-std_msgs==4.9.0
-std_srvs==4.9.0
 tornado==6.5.4
 transforms3d==0.4.2
 Twisted==22.1.0
 tqdm
 ujson==5.1.0
-visualization_msgs
 waitress==1.4.4
 websockets==15.0.1
