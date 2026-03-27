@@ -4,7 +4,6 @@ ament_flake8
 ament_index_python
 ament_pep257
 autobahn_rce
-builtin_interfaces
 cbor2
 example_interfaces
 Flask
