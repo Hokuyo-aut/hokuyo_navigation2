@@ -5,7 +5,6 @@ ament_index_python
 ament_pep257
 autobahn_rce
 cbor2
-example_interfaces
 Flask
 Flask_Sockets
 geometry_msgs
