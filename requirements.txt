@@ -1,9 +1,10 @@
 action_msgs
-ament_copyright
-ament_flake8
-ament_index_python
-ament_pep257
-autobahn_rce
+# ament_copyright
+# ament_flake8
+# ament_index_python
+# ament_pep257
+# autobahn_rce
+ahrs
 cbor2
 Flask
 Flask_Sockets
