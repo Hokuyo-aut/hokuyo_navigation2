@@ -8,7 +8,7 @@
 [submodule "vizanti"]
 	path = vizanti
 	url = https://github.com/hokuyo-rd-release/vizanti.git
-	branch = ros2
+	branch = ATC_2025
 [submodule "fix2xyz_packages_ros2"]
 	path = fix2xyz_packages_ros2
 	url = https://github.com/hokuyo-rd-release/fix2xyz_packages_ros2.git
