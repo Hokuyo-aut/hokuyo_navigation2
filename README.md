@@ -36,7 +36,18 @@
     - **Map Viewer**: 3D/2Dマップとウェイポイントを視覚化し、GUI上で直感的にウェイポイントを編集（追加、移動、回転、属性変更）。
     - **CSV Editor**: マルチマップ走行シナリオをテーブル形式で簡単に編集。
 
+## 使い方
 
+[hokuyo_navigation2 ユーザーマニュアル](doc/hokuyo_navigation2_usersmanual_v0.1.0.pdf) ドキュメントバージョン 0.1.0 を公開しました。
+本ドキュメントバージョンで説明する hokuyo_navigation2 のソフトウェアバージョンは 1.0.0 となります。また、説明内容は 自律走行機能以外の以下の手順となります。
+
+1. 環境構築
+2. GUIアプリケーションの起動
+3. コンフィグファイルの設定
+4. データの取得
+5. マッピング
+6. 経路設計
+7. 2D地図への変換
 
 ## セットアップ
 
@@ -136,6 +147,9 @@ sudo ufw allow 9000/tcp
 sudo ufw allow 9000
 sudo ufw allow 9090/tcp
 sudo ufw allow 9090
+sudo ufw allow 10900/tcp
+sudo ufw allow 10900
+sudo ufw allow 7400:7800/udp
 sudo ufw enable
 ```
 
