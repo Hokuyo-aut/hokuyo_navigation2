@@ -66,6 +66,12 @@ rosdep update
 rosdep install --from-paths src/hokuyo_navigation2 --ignore-src -r -y
 sudo apt-get install ros-humble-tf-transformations ros-humble-joint-state-publisher ros-humble-robot-state-publisher
 
+# 下記エラーが出力されますが無視して進めて下さい。
+# ERROR: the following packages/stacks could not have their rosdep keys resolved to system dependencies:
+# waypoint_manager: Cannot locate rosdep definition for [move_base_msgs] → 使用しません。
+# hokuyo_navigation2: Cannot locate rosdep definition for [tf-transformations] → 後の手順でインストールします。
+# fix2xyz: Cannot locate rosdep definition for [PROJ] → 後からの手順でインストールします。
+
 # 2. Python パッケージ
 cd <YOUR_ROS2_WORKSPACE>/src/hokuyo_navigation2
 pip3 install -r requirements.txt
@@ -92,7 +98,7 @@ sudo make install
 # ./run-test
 
 # icart_mini_driver_ros2のインストール
-cd <YOUR_ROS2_WORKSPACE>
+cd <YOUR_ROS2_WORKSPACE>/src
 git clone https://github.com/hokuyo-rd-release/icart_mini_driver_ros2.git
 colcon build --symlink-install --packages-select icart_mini_driver
 
