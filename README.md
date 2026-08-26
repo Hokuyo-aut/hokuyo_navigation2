@@ -49,22 +49,28 @@
 6. 経路設計
 7. 2D地図への変換
 
+> **注意**: 本ユーザーマニュアル (ドキュメントバージョン 0.1.0) の「1. 環境構築」は ROS 2 Humble / Ubuntu 22.04 を前提とした記載です。
+> ROS 2 Jazzy / Ubuntu 24.04 で構築する場合は、下記「セットアップ」の手順を参照してください。
+
 ## セットアップ
 
-ROS2 Version: Humble
+ROS2 Version: Jazzy (Ubuntu 24.04 LTS / Python 3.12)
+
+> **注意**: 本ブランチ (`jazzy`) は ROS 2 Jazzy / Ubuntu 24.04 LTS 用の手順です。
+> ROS 2 Humble / Ubuntu 22.04 で使用する場合は `release` ブランチを参照してください。
 
 ```bash
 sudo apt-get update 
-sudo apt-get install -y tree xdotool wmctrl zenity bc
+sudo apt-get install -y tree xdotool wmctrl zenity bc python3-pip
 
 # 1. build ros2 packages
 cd <YOUR_ROS2_WORKSPACE>/src
 git clone https://github.com/Hokuyo-aut/hokuyo_rsf.git
-git clone --recursive https://github.com/Hokuyo-aut/hokuyo_navigation2.git
+git clone --recursive -b jazzy https://github.com/Hokuyo-aut/hokuyo_navigation2.git
 cd <YOUR_ROS2_WORKSPACE>
 rosdep update
 rosdep install --from-paths src/hokuyo_navigation2 --ignore-src -r -y
-sudo apt-get install ros-humble-tf-transformations ros-humble-joint-state-publisher ros-humble-robot-state-publisher
+sudo apt-get install ros-jazzy-tf-transformations ros-jazzy-joint-state-publisher ros-jazzy-robot-state-publisher
 
 # 下記エラーが出力されますが無視して進めて下さい。
 # ERROR: the following packages/stacks could not have their rosdep keys resolved to system dependencies:
@@ -73,8 +79,15 @@ sudo apt-get install ros-humble-tf-transformations ros-humble-joint-state-publis
 # fix2xyz: Cannot locate rosdep definition for [PROJ] → 後からの手順でインストールします。
 
 # 2. Python パッケージ
+# Ubuntu 24.04 (Python 3.12) は PEP 668 により外部管理環境となっているため、
+# オプション無しで pip3 install するとインストールに失敗します。
+#   error: externally-managed-environment
+# 下記のように --user --break-system-packages を付けてユーザ環境 (~/.local) へインストールしてください。
 cd <YOUR_ROS2_WORKSPACE>/src/hokuyo_navigation2
-pip3 install -r requirements.txt
+pip3 install --user --break-system-packages -r requirements.txt
+
+# ~/.local/bin に PATH が通っていない場合は追加してください。
+# echo 'export PATH=$HOME/.local/bin:$PATH' >> ~/.bashrc && source ~/.bashrc
 
 # 3. Motor_driver if you need.
 # ypspurのインストール
@@ -106,6 +119,8 @@ colcon build --symlink-install --packages-select icart_mini_driver
 sudo apt-get install libsqlite3-dev sqlite3 libeigen3-dev qtbase5-dev clang qtcreator libqt5x11extras5-dev
 
 ## proj
+# Ubuntu 24.04 の apt には proj 9.4.0 (libproj-dev) しか無いため、9.4.1 をソースからビルドして
+# /usr/local へインストールします。
 cd ~/hokuyo_lib
 wget https://download.osgeo.org/proj/proj-9.4.1.tar.gz
 tar -zxvf proj-9.4.1.tar.gz
@@ -117,6 +132,8 @@ cmake --build .
 sudo cmake --build . --target install
 
 ## pcl 1.14.1 ビルドに時間がかかります。
+# Ubuntu 24.04 の apt には pcl 1.14.0 (libpcl-dev) しか無いため、1.14.1 をソースからビルドして
+# /opt/pcl へインストールし、CMAKE_PREFIX_PATH で参照します。
 cd ~/hokuyo_lib
 wget https://github.com/PointCloudLibrary/pcl/releases/download/pcl-1.14.1/source.tar.gz -O pcl.tar.gz
 tar -xvf pcl.tar.gz
@@ -165,7 +182,7 @@ sudo ufw enable
 
 ```bash
 cd <YOUR_ROS2_WORKSPACE>/src/hokuyo_navigation2/hokuyo_navigation2
-./scripts/00_sample_util/start_server.bash
+./scripts/start_server.sh
 ```
 
 Webブラウザで `http://<ホストマシンのIPアドレス>:5050` にアクセスします。GUIの指示に従い、マッピングやナビゲーションを実行してください。詳細は [`hokuyo_navigation2_gui`](https://github.com/hokuyo-rd/hokuyo_navigation2_gui) のドキュメントを参照してください。
@@ -176,5 +193,5 @@ Webブラウザで `http://<ホストマシンのIPアドレス>:5050` にアク
 
 ```bash
 cd <YOUR_ROS2_WORKSPACE>/src/hokuyo_navigation2/hokuyo_navigation2
-./scripts/00_sample_util/stop_server.bash
+./scripts/stop_server.sh
 ```
