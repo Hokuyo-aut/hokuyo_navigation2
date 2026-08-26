@@ -5,7 +5,7 @@ Flask_Sockets
 gevent
 gevent_websocket
 matplotlib
-numpy==1.22.4
+numpy>=1.26.0
 open3d
 pathos
 Pillow

@@ -1,14 +1,14 @@
 [submodule "hokuyo_navigation2"]
 	path = hokuyo_navigation2
 	url = https://github.com/hokuyo-rd-release/hokuyo_navigation2.git
-	branch = release
+	branch = jazzy
 [submodule "hokuyo_navigation2_gui"]
 	path = hokuyo_navigation2_gui
 	url = https://github.com/hokuyo-rd-release/hokuyo_navigation2_gui.git
 [submodule "vizanti"]
 	path = vizanti
 	url = https://github.com/hokuyo-rd-release/vizanti.git
-	branch = ATC_2025
+	branch = release
 [submodule "fix2xyz_packages_ros2"]
 	path = fix2xyz_packages_ros2
 	url = https://github.com/hokuyo-rd-release/fix2xyz_packages_ros2.git
@@ -18,6 +18,7 @@
 [submodule "jsk_visualization"]
 	path = jsk_visualization
 	url = https://github.com/hokuyo-rd-release/jsk_visualization.git
+	branch = jazzy
 [submodule "lio_nav2_bringup"]
 	path = lio_nav2_bringup
 	url = https://github.com/hokuyo-rd-release/lio_nav2_bringup.git
