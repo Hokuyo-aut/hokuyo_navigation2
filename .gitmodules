@@ -33,8 +33,11 @@
 [submodule "rosbridge_suite"]
 	path = rosbridge_suite
 	url = https://github.com/hokuyo-rd-release/rosbridge_suite.git
-	branch = humble
+	branch = jazzy
 [submodule "nmea_msgs"]
 	path = nmea_msgs
 	url = https://github.com/hokuyo-rd-release/nmea_msgs.git
 	branch = ros2
+[submodule "doc/hokuyo_navigation2_users_manual"]
+	path = doc/hokuyo_navigation2_users_manual
+	url = https://github.com/hokuyo-rd-release/hokuyo_navigation2_users_manual.git

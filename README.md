@@ -38,19 +38,37 @@
 
 ## 使い方
 
-[hokuyo_navigation2 ユーザーマニュアル](doc/hokuyo_navigation2_usersmanual_v0.1.0.pdf) ドキュメントバージョン 0.1.0 を公開しました。
-本ドキュメントバージョンで説明する hokuyo_navigation2 のソフトウェアバージョンは 1.0.0 となります。また、説明内容は 自律走行機能以外の以下の手順となります。
+[hokuyo_navigation2 ユーザーマニュアル](doc/hokuyo_navigation2_users_manual/hokuyo_navigation2_usersmanual_v1.1.0.pdf) ドキュメントバージョン 1.1.0 を公開しました。
+本ドキュメントバージョンで説明する hokuyo_navigation2 のソフトウェアバージョンは 1.0.0 となります。
+ROS 2 Humble / Ubuntu 22.04 (`release` ブランチ) と ROS 2 Jazzy / Ubuntu 24.04 (`jazzy` ブランチ) の
+**両方の構成を併記**しており、以下の全手順を収録しています。
 
-1. 環境構築
-2. GUIアプリケーションの起動
-3. コンフィグファイルの設定
-4. データの取得
-5. マッピング
-6. 経路設計
-7. 2D地図への変換
+1. システム構成
+2. セットアップ（環境構築）
+3. GUIアプリケーションの起動
+4. コンフィグファイルの設定
+5. データの取得
+6. マッピング
+7. 経路設計
+8. 2D地図への変換
+9. 自律走行
+10. ファイル管理とデータ変換ツール
+11. トラブルシューティング（エラー番号 E-101 〜 E-610）
 
-> **注意**: 本ユーザーマニュアル (ドキュメントバージョン 0.1.0) の「1. 環境構築」は ROS 2 Humble / Ubuntu 22.04 を前提とした記載です。
-> ROS 2 Jazzy / Ubuntu 24.04 で構築する場合は、下記「セットアップ」の手順を参照してください。
+付録として、パッケージリファレンス（全サブモジュールの詳細）、設定・パラメータ早見表、用語集を収録しています。
+
+> **旧版**: ドキュメントバージョン 0.1.0 は [doc/hokuyo_navigation2_usersmanual_v0.1.0.pdf](doc/hokuyo_navigation2_usersmanual_v0.1.0.pdf)、
+> 1.0.0 は [doc/hokuyo_navigation2_users_manual/out/](doc/hokuyo_navigation2_users_manual/out/) にあります。
+
+### マニュアルのビルド
+
+マニュアルは [Typst](https://typst.app/) で記述されています。ソースは `doc/hokuyo_navigation2_users_manual/` にあります。
+
+```bash
+# 日本語フォント (原ノ味フォント) が必要です
+cd doc/hokuyo_navigation2_users_manual
+typst compile hokuyo_navigation2_usersmanual_v1.1.0.typ
+```
 
 ## セットアップ
 
@@ -170,8 +188,8 @@ sudo ufw allow 9000/tcp
 sudo ufw allow 9000
 sudo ufw allow 9090/tcp
 sudo ufw allow 9090
-sudo ufw allow 10900/tcp
-sudo ufw allow 10900
+sudo ufw allow 10940/tcp
+sudo ufw allow 10940
 sudo ufw allow 7400:7800/udp
 sudo ufw enable
 ```
