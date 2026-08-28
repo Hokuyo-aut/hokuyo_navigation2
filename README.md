@@ -38,7 +38,7 @@
 
 ## 使い方
 
-[hokuyo_navigation2 ユーザーマニュアル](doc/hokuyo_navigation2_users_manual/hokuyo_navigation2_usersmanual_v1.1.0.pdf) ドキュメントバージョン 1.1.0 を公開しました。
+[hokuyo_navigation2 ユーザーマニュアル](doc/hokuyo_navigation2_users_manual/hokuyo_navigation2_usersmanual_v1.0.0.pdf) ドキュメントバージョン 1.0.0 を公開しました。
 本ドキュメントバージョンで説明する hokuyo_navigation2 のソフトウェアバージョンは 1.0.0 となります。
 ROS 2 Humble / Ubuntu 22.04 (`release` ブランチ) と ROS 2 Jazzy / Ubuntu 24.04 (`jazzy` ブランチ) の
 **両方の構成を併記**しており、以下の全手順を収録しています。
