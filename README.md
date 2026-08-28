@@ -58,7 +58,7 @@ ROS 2 Humble / Ubuntu 22.04 (`release` ブランチ) と ROS 2 Jazzy / Ubuntu 24
 付録として、パッケージリファレンス（全サブモジュールの詳細）、設定・パラメータ早見表、用語集を収録しています。
 
 > **旧版**: ドキュメントバージョン 0.1.0 は [doc/hokuyo_navigation2_usersmanual_v0.1.0.pdf](doc/hokuyo_navigation2_usersmanual_v0.1.0.pdf)、
-> 1.0.0 は [doc/hokuyo_navigation2_users_manual/out/](doc/hokuyo_navigation2_users_manual/out/) にあります。
+> 1.0.0 は [doc/hokuyo_navigation2_users_manual](doc/hokuyo_navigation2_users_manual) にあります。
 
 ### マニュアルのビルド
 
